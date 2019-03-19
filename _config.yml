@@ -1,6 +1,9 @@
 ---
-title: Space Jam
-timezone: UTC
+---
+
+---
+title: SPACE JAM
+timezone: Asia/Jakarta
 collections:
   posts:
     title: Posts
@@ -8,24 +11,16 @@ collections:
   uploads:
     title: Uploads
     output: true
-description: Minimal storytellers
-url: https://ajirogo.com
-author:
-  name: Pratig Ajirogo
-  url: https://ajirogo.com
-markdown: kramdown
-include:
-- _pages
-sass:
-  sass_dir: _sass
-  style: compressed
-plugins:
-- jekyll-feed
-- jekyll-paginate
-- jekyll-seo-tag
-permalink: "/:year-:month-:day/:title"
-paginate: 5
-exclude:
-- Gemfile
-- Gemfile.lock
-- tale.gemspec
+defaults:
+- scope:
+    path: ''
+    type: posts
+  values:
+    layout: post
+    permalink: "/posts/:title/"
+- scope:
+    path: ''
+    type: pages
+  values:
+    layout: page
+permalink: pretty
